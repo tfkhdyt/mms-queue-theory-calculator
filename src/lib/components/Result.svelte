@@ -5,7 +5,7 @@
 
 <div transition:fade>
 	<hr class="my-10 border-gray-600" />
-	<h1 class="text-gray-300 text-3xl font-bold mb-4 text-center">Result</h1>
+	<h1 class="text-gray-300 text-xl md:text-3xl font-bold mb-4 text-center">Result</h1>
 	<div class="text-gray-300 text">
 		<ul class="space-y-2 text-xl font-mono">
 			<li>Po : {$po}</li>
