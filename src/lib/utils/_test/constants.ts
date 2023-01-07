@@ -12,7 +12,7 @@ export const test1: TestPayload = {
 
 export const test2: TestPayload = {
   arrivalRate: 5,
-  serviceRate: 10,
+  serviceRate: 15,
   numberOfServers: 5
 }
 
