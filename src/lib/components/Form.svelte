@@ -24,9 +24,6 @@
 		wq.set(calculateWq($w, $serviceRate));
 		pq.set(calculatePq($arriveRate, $serviceRate, $numberOfServers));
 		rho.set(calculateRho($arriveRate, $serviceRate, $numberOfServers));
-
-		console.log({ arriveRate, serviceRate, numberOfServers });
-		console.log({ po, l, w, lq, wq, pq, rho });
 	}
 
 	function handleReset() {

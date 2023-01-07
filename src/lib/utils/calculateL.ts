@@ -8,6 +8,6 @@ export function calculateL(arrivalRate: number, serviceRate: number, numberOfSer
 	const c = arrivalRate / serviceRate;
 
 	const result = (a / b) * po + c;
-  
-  return result;
+
+	return result;
 }

@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { factorial } from "../factorial";
+import { describe, expect, it } from 'vitest';
+import { factorial } from '../factorial';
 
 describe('factorial function', () => {
 	it('it should factorialize correctly', () => {
