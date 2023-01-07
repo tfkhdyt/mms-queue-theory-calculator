@@ -6,8 +6,8 @@ export function calculatePo(arrivalRate: number, serviceRate: number, numberOfSe
 		(1 / factorial(numberOfServers)) *
 		(arrivalRate / serviceRate) ** numberOfServers *
 		((numberOfServers * serviceRate) / (numberOfServers * serviceRate - arrivalRate));
-
 	const result = (a + b) ** -1;
+
 	return result;
 }
 
