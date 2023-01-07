@@ -1,3 +1,5 @@
-export function calculateWq(lq: number, arrivalRate: number) {
-  return lq / arrivalRate;
+import { fixed } from "./fixed";
+
+export function calculateWq(w: number, serviceRate: number) {
+	return fixed(w, 6) - serviceRate ** -1;
 }

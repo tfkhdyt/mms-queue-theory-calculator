@@ -8,7 +8,10 @@ describe('calculateLq function', () => {
 		const l1 = calculateL(test1.arrivalRate, test1.serviceRate, test1.numberOfServers);
 		const l2 = calculateL(test2.arrivalRate, test2.serviceRate, test2.numberOfServers);
 
-		expect(calculateLq(l1, test1.arrivalRate, test1.serviceRate)).toBeCloseTo(0.1739);
-		expect(calculateLq(l2, test2.arrivalRate, test2.serviceRate)).toBeCloseTo(-0.00033);
+		const lq1 = calculateLq(l1, test1.arrivalRate, test1.serviceRate);
+		const lq2 = calculateLq(l2, test2.arrivalRate, test2.serviceRate);
+
+		expect(lq1).toBeCloseTo(0.1739);
+		expect(lq2).toBeCloseTo(-0.00033);
 	});
 });
