@@ -7,7 +7,7 @@
 	import { calculateW } from '$lib/utils/calculateW';
 	import { calculateWq } from '$lib/utils/calculateWq';
 
-	import { arriveRate, numberOfServers, serviceRate } from '$stores/input';
+	import { arrivalRate, numberOfServers, serviceRate } from '$stores/input';
 	import { po, l, w, lq, wq, pq, rho } from '$stores/output';
 
   import ResetButton from './buttons/ResetButton.svelte';
@@ -17,13 +17,13 @@
 	function handleSubmit(e: Event) {
 		e.preventDefault();
 
-		po.set(calculatePo($arriveRate, $serviceRate, $numberOfServers));
-		l.set(calculateL($arriveRate, $serviceRate, $numberOfServers));
-		w.set(calculateW($l, $arriveRate));
-		lq.set(calculateLq($l, $arriveRate, $serviceRate));
+		po.set(calculatePo($arrivalRate, $serviceRate, $numberOfServers));
+		l.set(calculateL($arrivalRate, $serviceRate, $numberOfServers));
+		w.set(calculateW($l, $arrivalRate));
+		lq.set(calculateLq($l, $arrivalRate, $serviceRate));
 		wq.set(calculateWq($w, $serviceRate));
-		pq.set(calculatePq($arriveRate, $serviceRate, $numberOfServers));
-		rho.set(calculateRho($arriveRate, $serviceRate, $numberOfServers));
+		pq.set(calculatePq($arrivalRate, $serviceRate, $numberOfServers));
+		rho.set(calculateRho($arrivalRate, $serviceRate, $numberOfServers));
 	}
 
 	function handleReset() {
@@ -32,7 +32,7 @@
 </script>
 
 <form on:submit={handleSubmit} on:reset={handleReset}>
-	<InputField id="arriveRate" label="Enter the arrive rate (λ)" state={arriveRate} />
+	<InputField id="arrivalRate" label="Enter the arrival rate (λ)" state={arrivalRate} />
 	<InputField id="serviceRate" label="Enter the service rate (µ)" state={serviceRate} />
 	<InputField id="numberOfServers" label="Enter the number of servers (s)" state={numberOfServers} />
 
