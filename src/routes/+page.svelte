@@ -7,12 +7,12 @@
 </svelte:head>
 
 <div class="bg" />
-<main class="grid place-items-center min-h-screen min-w-screen content">
+<main class="flex justify-center w-screen h-screen py-20 md:py-0 md:items-center">
 	<Card />
 </main>
 
 <style>
-	.content {
+	.bg {
 		background-image: url('../assets/img/background.svg');
 		background-repeat: no-repeat;
 		background-position: center;
@@ -23,4 +23,8 @@
 		background-size: cover;
 		/* background-attachment: fixed; */
 	}
+
+  main {
+    position: absolute;
+  }
 </style>
