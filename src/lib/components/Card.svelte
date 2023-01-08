@@ -24,7 +24,7 @@
 			<Result />
 		{/if}
 	</div>
-	<p class="text-center font-light text-lg mb-6">
+	<p class="text-center font-light text-lg pb-6">
 		Created by <a
 			class="link link-underline link-underline-black font-medium"
 			href="https://tfkhdyt.my.id"
