@@ -29,19 +29,19 @@ npm install
 
 - Start development server
 
-```npm
+```bash
 npm run dev
 ```
 
 - Build for production
 
-```npm
+```bash
 npm run build
 ```
 
 - Locally preview production build
 
-```npm
+```bash
 npm run preview
 ```
 
