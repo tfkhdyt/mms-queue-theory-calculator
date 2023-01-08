@@ -49,4 +49,4 @@ npm run preview
 
 ![preview-1](./static/Screenshot_20230108_114010.png)
 
-![preview-2](./static/Screenshot_20230108_114026.png)
+![preview-2](./static/Screenshot_20230108_204405.png)
