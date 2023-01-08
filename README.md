@@ -1,38 +1,50 @@
-# create-svelte
+# M/M/s Queue Theory Calculator
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+![mms-queue-theory-calculator](https://socialify.git.ci/tfkhdyt/mms-queue-theory-calculator/image?description=1&descriptionEditable=Calculator%20to%20solve%20M%2FM%2Fs%20queue%20theory%20problem%2C%20written%20in%20TypeScript%20and%20SvelteKit.&font=Inter&language=1&name=1&owner=1&pattern=Plus&theme=Dark)
 
-## Creating a project
+Calculator to solve M/M/s queue theory problem, written in TypeScript and SvelteKit.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Built with
+
+- TypeScript
+- SvelteKit
+- Tailwind CSS
+- Vitest
+
+## Prerequisite
+
+- [Node.js](https://nodejs.org/en/) (v18.13 or later)
+
+## Installation
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/tfkhdyt/mms-queue-theory-calculator
+cd mms-queue-theory-calculator/
+npm install
 ```
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Start development server
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+- Build for production
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+- Locally preview production build
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+npm run preview
+```
+
+## Preview
+
+![preview-1](./static/Screenshot_20230108_083004.png)
+
+![preview-2](./static/Screenshot_20230108_083019.png)
