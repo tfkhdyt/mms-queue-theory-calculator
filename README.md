@@ -47,6 +47,6 @@ npm run preview
 
 ## Preview
 
-![preview-1](./static/Screenshot_20230108_083004.png)
+![preview-1](./static/Screenshot_20230108_114010.png)
 
-![preview-2](./static/Screenshot_20230108_083019.png)
+![preview-2](./static/Screenshot_20230108_114026.png)
