@@ -14,9 +14,7 @@
   import SubmitButton from './buttons/SubmitButton.svelte';
 	import InputField from './InputField.svelte';
 
-	function handleSubmit(e: Event) {
-		e.preventDefault();
-
+	function handleSubmit() {
 		po.set(calculatePo($arrivalRate, $serviceRate, $numberOfServers));
 		l.set(calculateL($arrivalRate, $serviceRate, $numberOfServers));
 		w.set(calculateW($l, $arrivalRate));
@@ -31,7 +29,7 @@
 	}
 </script>
 
-<form on:submit={handleSubmit} on:reset={handleReset}>
+<form on:submit|preventDefault={handleSubmit} on:reset={handleReset}>
 	<InputField id="arrivalRate" label="Enter the arrival rate (λ)" state={arrivalRate} />
 	<InputField id="serviceRate" label="Enter the service rate (µ)" state={serviceRate} />
 	<InputField id="numberOfServers" label="Enter the number of servers (s)" state={numberOfServers} />
