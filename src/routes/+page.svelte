@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="bg" />
-<main class="flex justify-center w-screen h-screen py-20 md:py-0 md:items-center">
+<main class="flex justify-center w-screen h-screen py-20 md:py-0 md:items-center absolute">
 	<Card />
 </main>
 
@@ -23,8 +23,4 @@
 		background-size: cover;
 		/* background-attachment: fixed; */
 	}
-
-  main {
-    position: absolute;
-  }
 </style>
