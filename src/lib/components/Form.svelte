@@ -19,9 +19,15 @@
 
 	// validation schema
 	const inputSchema = z.object({
-		arrivalRate: z.number().positive(),
-		serviceRate: z.number().positive(),
-		numberOfServers: z.number().positive()
+		arrivalRate: z
+			.number({ invalid_type_error: 'Must be a number' })
+			.positive('Must be greater than 0'),
+		serviceRate: z
+			.number({ invalid_type_error: 'Must be a number' })
+			.positive('Must be greater than 0'),
+		numberOfServers: z
+			.number({ invalid_type_error: 'Must be a number' })
+			.positive('Must be greater than 0')
 	});
 
 	// custom type
