@@ -14,7 +14,7 @@
 			required
 			type="number"
 			{id}
-			class="w-full rounded-lg border-gray-800/50 p-4 bg-gray-800/50 focus:ring-2 text-gray-300 transition focus:scale-105 focus:shadow-xl"
+			class="w-full rounded-lg border-gray-800/50 bg-gray-800/50 p-4 text-gray-300 transition focus:scale-105 focus:shadow-xl focus:ring-2"
 			placeholder={label}
 		/>
 	</div>

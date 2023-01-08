@@ -10,8 +10,8 @@
 	import { arrivalRate, numberOfServers, serviceRate } from '$stores/input';
 	import { po, l, w, lq, wq, pq, rho } from '$stores/output';
 
-  import ResetButton from './buttons/ResetButton.svelte';
-  import SubmitButton from './buttons/SubmitButton.svelte';
+	import ResetButton from './buttons/ResetButton.svelte';
+	import SubmitButton from './buttons/SubmitButton.svelte';
 	import InputField from './InputField.svelte';
 
 	function handleSubmit() {
@@ -32,10 +32,14 @@
 <form on:submit|preventDefault={handleSubmit} on:reset={handleReset}>
 	<InputField id="arrivalRate" label="Enter the arrival rate (λ)" state={arrivalRate} />
 	<InputField id="serviceRate" label="Enter the service rate (µ)" state={serviceRate} />
-	<InputField id="numberOfServers" label="Enter the number of servers (s)" state={numberOfServers} />
+	<InputField
+		id="numberOfServers"
+		label="Enter the number of servers (s)"
+		state={numberOfServers}
+	/>
 
-	<div class="space-x-4 flex">
-    <SubmitButton />
-    <ResetButton />
+	<div class="flex space-x-4">
+		<SubmitButton />
+		<ResetButton />
 	</div>
 </form>

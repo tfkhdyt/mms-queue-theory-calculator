@@ -9,12 +9,12 @@
 
 <main>
 	<div
-		class={`bg-slate-800/50 m-6 p-8 md:px-10 md:py-8 rounded-xl backdrop-blur shadow-lg grid grid-cols-1 gap-16 ${
+		class={`m-6 grid grid-cols-1 gap-16 rounded-xl bg-slate-800/50 p-8 shadow-lg backdrop-blur md:px-10 md:py-8 ${
 			isResult && 'lg:grid-cols-2'
 		}`}
 	>
 		<div>
-			<h1 class="text-gray-300 text-xl md:text-3xl font-bold mb-4 text-center">
+			<h1 class="mb-4 text-center text-xl font-bold text-gray-300 md:text-3xl">
 				M/M/s Queue Theory Calculator
 			</h1>
 			<Form />
@@ -24,7 +24,7 @@
 			<Result />
 		{/if}
 	</div>
-	<p class="text-center font-light text-lg pb-6">
+	<p class="pb-6 text-center text-lg font-light">
 		Created by <a
 			class="link link-underline link-underline-black font-medium"
 			href="https://tfkhdyt.my.id"

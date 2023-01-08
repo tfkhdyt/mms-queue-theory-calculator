@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="bg" />
-<main class="flex justify-center w-screen h-screen py-20 lg:items-center absolute">
+<main class="absolute flex h-screen w-screen justify-center py-20 lg:items-center">
 	<Card />
 </main>
 
