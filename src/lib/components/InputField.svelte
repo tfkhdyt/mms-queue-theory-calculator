@@ -21,9 +21,11 @@
 		<input
 			bind:value={$state}
 			type="number"
+			required
+			min={1}
 			{id}
 			class={`w-full rounded-lg border-gray-800/50 bg-gray-800/50 p-4 text-gray-300 transition focus:scale-105 focus:shadow-xl focus:ring-2 ${
-				errorMessage && 'focus:border-red-500 focus:ring-red-500'
+				errorMessage ? 'focus:border-red-500 focus:ring-red-500' : ''
 			}`}
 			placeholder={label}
 		/>

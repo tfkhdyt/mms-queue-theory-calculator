@@ -10,7 +10,7 @@
 <main>
 	<div
 		class={`m-6 grid grid-cols-1 gap-16 rounded-xl bg-slate-800/50 p-8 shadow-lg backdrop-blur md:px-10 md:py-8 ${
-			isResult && 'lg:grid-cols-2'
+			isResult ? 'lg:grid-cols-2' : ''
 		}`}
 	>
 		<div>
