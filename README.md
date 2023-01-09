@@ -16,8 +16,8 @@ Calculator to solve M/M/s queue theory problem, written in TypeScript and Svelte
 
 ## Demo
 
-- https://queue.tfkhdyt.my.id
-- https://mms-queue-theory-calculator.vercel.app
+- [https://queue.tfkhdyt.my.id](https://queue.tfkhdyt.my.id)
+- [https://mms-queue-theory-calculator.vercel.app](https://mms-queue-theory-calculator.vercel.app)
 
 ## Prerequisite
 
@@ -56,3 +56,7 @@ npm run preview
 ![preview-1](./static/Screenshot_20230108_114010.png)
 
 ![preview-2](./static/Screenshot_20230108_204405.png)
+
+![preview-3](./static/photo1673225196.jpeg)
+
+![preview-4](./static/photo1673225228.jpeg)
