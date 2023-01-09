@@ -12,6 +12,12 @@ Calculator to solve M/M/s queue theory problem, written in TypeScript and Svelte
 - SvelteKit
 - Tailwind CSS
 - Vitest
+- Zod
+
+## Demo
+
+- https://queue.tfkhdyt.my.id
+- https://mms-queue-theory-calculator.vercel.app
 
 ## Prerequisite
 
