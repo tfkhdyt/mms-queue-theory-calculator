@@ -1,5 +1,7 @@
 <script>
 	import Card from '$lib/components/Card.svelte';
+
+  console.log('Hayo mau ngapain...')
 </script>
 
 <svelte:head>
