@@ -57,6 +57,4 @@ npm run preview
 
 ![preview-2](./static/Screenshot_20230108_204405.png)
 
-![preview-3](./static/photo1673225196.jpeg)
-
-![preview-4](./static/photo1673225228.jpeg)
+<img src='./static/photo1673225196.jpeg' width='450' /> <img src='./static/photo1673225228.jpeg' width='450' />
