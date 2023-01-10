@@ -16,6 +16,7 @@ specifiers:
   prettier-plugin-svelte: ^2.8.1
   prettier-plugin-tailwindcss: ^0.2.1
   rollup-plugin-visualizer: ^5.9.0
+  superstruct: ^1.0.3
   svelte: ^3.54.0
   svelte-check: ^2.9.2
   tailwindcss: ^3.2.4
@@ -26,6 +27,7 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
+  superstruct: 1.0.3
   zod: 3.20.2
 
 devDependencies:
@@ -2069,6 +2071,11 @@ packages:
     dependencies:
       acorn: 8.8.1
     dev: true
+
+  /superstruct/1.0.3:
+    resolution: {integrity: sha512-8iTn3oSS8nRGn+C2pgXSKPI3jmpm6FExNazNpjvqS6ZUJQCej3PUXEKM8NjHBOs54ExM+LPW/FBRhymrdcCiSg==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /supports-color/7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}

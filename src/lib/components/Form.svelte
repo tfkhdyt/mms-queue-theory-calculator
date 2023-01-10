@@ -1,6 +1,7 @@
 <script lang="ts">
 	// imports
-	import { z, ZodError } from 'zod';
+	// import { z, ZodError } from 'zod';
+	import { object, number, min, assert, StructError } from 'superstruct';
 
 	import { calculateL } from '$lib/utils/calculateL';
 	import { calculateLq } from '$lib/utils/calculateLq';
@@ -18,16 +19,22 @@
 	import InputField from './InputField.svelte';
 
 	// validation schema
-	const inputSchema = z.object({
-		arrivalRate: z
-			.number({ invalid_type_error: 'Must be a number' })
-			.positive('Must be greater than 0'),
-		serviceRate: z
-			.number({ invalid_type_error: 'Must be a number' })
-			.positive('Must be greater than 0'),
-		numberOfServers: z
-			.number({ invalid_type_error: 'Must be a number' })
-			.positive('Must be greater than 0')
+	// const inputSchema = z.object({
+	// 	arrivalRate: z
+	// 		.number({ invalid_type_error: 'Must be a number' })
+	// 		.positive('Must be greater than 0'),
+	// 	serviceRate: z
+	// 		.number({ invalid_type_error: 'Must be a number' })
+	// 		.positive('Must be greater than 0'),
+	// 	numberOfServers: z
+	// 		.number({ invalid_type_error: 'Must be a number' })
+	// 		.positive('Must be greater than 0')
+	// });
+
+	const Input = object({
+		arrivalRate: min(number(), 1),
+		serviceRate: min(number(), 1),
+		numberOfServers: min(number(), 1)
 	});
 
 	// custom type
@@ -43,11 +50,20 @@
 	function handleSubmit() {
 		try {
 			errors = [];
-			inputSchema.parse({
-				arrivalRate: $arrivalRate,
-				serviceRate: $serviceRate,
-				numberOfServers: $numberOfServers
-			});
+			// inputSchema.parse({
+			// 	arrivalRate: $arrivalRate,
+			// 	serviceRate: $serviceRate,
+			// 	numberOfServers: $numberOfServers
+			// });
+			assert(
+				{
+					arrivalRate: $arrivalRate,
+					serviceRate: $serviceRate,
+					numberOfServers: $numberOfServers
+				},
+				Input
+			);
+
 			po.set(calculatePo($arrivalRate, $serviceRate, $numberOfServers));
 			l.set(calculateL($arrivalRate, $serviceRate, $numberOfServers));
 			w.set(calculateW($l, $arrivalRate));
@@ -56,11 +72,26 @@
 			pq.set(calculatePq($arrivalRate, $serviceRate, $numberOfServers));
 			rho.set(calculateRho($arrivalRate, $serviceRate, $numberOfServers));
 		} catch (error) {
-			if (error instanceof ZodError) {
-				errors = error.errors.map((err) => ({
-					field: err.path[0],
-					message: err.message
-				})) as InputError[];
+			// if (error instanceof ZodError) {
+			// 	errors = error.errors.map((err) => ({
+			// 		field: err.path[0],
+			// 		message: err.message
+			// 	})) as InputError[];
+			// }
+			if (error instanceof StructError) {
+				errors = error.failures().map((err) => {
+					let message: string;
+					if (err.value === undefined || err.value === null) {
+						message = 'Required';
+					} else {
+						message = 'Should larger than 0';
+					}
+
+					return {
+						field: err.key,
+						message
+					};
+				});
 			}
 		}
 	}

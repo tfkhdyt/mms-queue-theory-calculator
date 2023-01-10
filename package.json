@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"superstruct": "^1.0.3",
 		"zod": "^3.20.2"
 	}
 }
