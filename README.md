@@ -12,7 +12,7 @@ Calculator to solve M/M/s queue theory problem, written in TypeScript and Svelte
 - SvelteKit
 - Tailwind CSS
 - Vitest
-- Zod
+- Superstruct
 
 ## Demo
 
